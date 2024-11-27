@@ -10,9 +10,7 @@ describe('My Login Application', () => {
         // Perform login
         await LoginPage.login('durjoy@gmail.com', '12345678');
 
-        // Uncomment if SecurePage assertions are needed
-        // await expect(SecurePage.flashAlert).toBeExisting();
-        // await expect(SecurePage.flashAlert).toHaveTextContaining('You logged into a secure area!');
+        //security
     });
 
     it('should order a product', async () => {
