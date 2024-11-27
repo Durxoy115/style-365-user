@@ -49,6 +49,9 @@ describe('My Login Application', () => {
     await checkoutButton.waitForClickable({ timeout: 5000 }); // Wait for up to 5 seconds
     await checkoutButton.click();
 
+    //Click on Terms & Condition Check Box
+    await $('//input[@id="acceptCheck"]').click();
+
     // Pause to observe the result (replace with assertions if possible)
     await browser.pause(5000);
     });
