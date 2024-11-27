@@ -8,7 +8,7 @@ describe('My Login Application', () => {
         await LoginPage.open();
 
         // Perform login
-        await LoginPage.login('durjoy77@gmail.com', '12345678');
+        await LoginPage.login('durjoy@gmail.com', '12345678');
 
         // Uncomment if SecurePage assertions are needed
         // await expect(SecurePage.flashAlert).toBeExisting();
@@ -48,11 +48,17 @@ describe('My Login Application', () => {
     const checkoutButton = await $('//button[@class="btn btn-sm dark-button text-uppercase"]');
     await checkoutButton.waitForClickable({ timeout: 5000 }); // Wait for up to 5 seconds
     await checkoutButton.click();
+    //Select default address
+    await $("//div[contains(@class, 'address-card') and contains(@class, 'light-gray-background')]").click();
 
     //Click on Terms & Condition Check Box
     await $('//input[@id="acceptCheck"]').click();
 
+    //Click to placde an Order
+    await $('//button[@class="btn btn-sm yellow-button text-uppercase my-3"]').click();
+
     // Pause to observe the result (replace with assertions if possible)
     await browser.pause(5000);
     });
+
 });
