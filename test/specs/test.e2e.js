@@ -25,6 +25,8 @@ describe('My Login Application', () => {
     const addToCartButton = await $('//button[@class="btn yellow-button w-100 py-2 py-md-3"]');
     await addToCartButton.waitForClickable({ timeout: 5000 }); // Wait for up to 5 seconds
     await addToCartButton.scrollIntoView({ block: 'start', inline: 'nearest' });
+
+    await $('//div[@class="pointer card  m-2"][2]').click();
     // Wait before interacting with the increment button
     const incrementButton = await $('(//button[@class="btn btn-outline-secondary"])[8]');
     await incrementButton.waitForClickable({ timeout: 5000 }); // Wait for up to 5 seconds
