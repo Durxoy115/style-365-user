@@ -55,7 +55,7 @@ describe('My Login Application', () => {
     //Click to placde an Order
     await $('//button[@class="btn btn-sm yellow-button text-uppercase my-3"]').click();
 
-    // Pause to observe the result (replace with assertions if possible)
+    
     await browser.pause(5000);
     });
 
